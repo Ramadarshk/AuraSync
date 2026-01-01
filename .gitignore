@@ -34,3 +34,4 @@ tmp/
 # PDFs and other documents in AuraSync
 async_file_r/AuraSync/
 
+.vscode/
