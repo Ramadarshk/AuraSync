@@ -1,0 +1,36 @@
+# Gemini-generated .gitignore
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.hprof
+*.orig
+local.properties
+
+# Gradle
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# Rust
+target/
+
+# OS-specific
+.DS_Store
+*~
+*.swp
+
+# Logs
+*.log
+
+# Temp files
+temp/
+tmp/
+
+# PDFs and other documents in AuraSync
+async_file_r/AuraSync/
+

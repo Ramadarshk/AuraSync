@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package aurasync;
+
+// Android specific generation options
+option java_package = "max.project.aurasync.proto";
+option java_multiple_files = true;
+
+message SyncEvent {
+  enum Action {
+    CREATE = 0;
+    MODIFY = 1;
+    DELETE = 2;
+    RENAME = 3;
+    ATTR_CHANGE = 4;
+  }
+
+  Action action = 1;
+  string file_path = 2;      // The target file or original path
+  uint64 file_size = 3;      // 0 for Delete/Rename, >0 for Create/Modify
+  string new_path = 4;       // Only used for RENAME
+  uint32 permissions = 5;    // For ATTR_CHANGE
+  string checksum = 6;       // BLAKE3 or SHA hash for integrity
+}
