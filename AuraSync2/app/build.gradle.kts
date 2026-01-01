@@ -38,6 +38,14 @@ android {
     buildFeatures {
         compose = true
     }
+
+    sourceSets {
+        getByName("main") {
+            proto {
+                srcDir("../../proto")
+            }
+        }
+    }
 }
 
 protobuf {
