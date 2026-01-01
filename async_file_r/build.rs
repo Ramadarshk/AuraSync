@@ -5,7 +5,7 @@ fn main() {
 }
     // 2. Compile the proto file. Use the path relative to Cargo.toml.
     prost_build::compile_protos(
-        &["../proto/sync_event.proto"], 
-        &["../proto/"]
+        &["src/proto/sync_event.proto"], 
+        &["src/proto/"]
     ).unwrap();
 }

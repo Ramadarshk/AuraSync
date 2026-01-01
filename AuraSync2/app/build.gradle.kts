@@ -38,14 +38,6 @@ android {
     buildFeatures {
         compose = true
     }
-
-    sourceSets {
-        getByName("main") {
-            proto {
-                srcDir("../../proto")
-            }
-        }
-    }
 }
 
 protobuf {
@@ -81,6 +73,6 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    implementation("commons-codec:commons-codec:1.16.1")
+    implementation(libs.commons.codec)
 
 }
